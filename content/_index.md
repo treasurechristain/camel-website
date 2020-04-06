@@ -9,7 +9,10 @@ description: Camel is an open source integration framework that empowers you to 
 
 {{< div "box" >}}
 {{< div >}}
-## Patterns
+
+<img src="./img/functions/svg/feature-patterns.svg" alt="pattern icon" class="feature-icon"/>
+
+### Patterns
 
 Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from **microservice architectures**.
 {{< /div >}}
@@ -17,7 +20,10 @@ Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve yo
 
 {{< div "box" >}}
 {{< div >}}
-## Components
+
+<img src="./img/functions/svg/feature-components.svg" alt="component icon" class="feature-icon"/>
+
+### Components
 
 Packed with <mark>several hundred components</mark> that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 {{< /div >}}
@@ -25,7 +31,10 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 {{< div "box" >}}
 {{< div >}}
-## Runtimes
+
+<img src="./img/functions/svg/feature-runtimes.svg" alt="runtime icon" class="feature-icon"/>
+
+### Runtimes
 
 <mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Application Servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
 {{< /div >}}
@@ -33,7 +42,10 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 {{< div "box" >}}
 {{< div >}}
-## Data Formats
+
+<img src="./img/functions/svg/feature-dataformats.svg" alt="data icon" class="feature-icon"/>
+
+### Data Formats
 
 Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
 {{< /div >}}
@@ -48,7 +60,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 **Apache Camel** is the *Swiss knife* of integration. 
 
 <a class="significant" href="./manual/latest/">Read the docs</a>
-<a class="significant" href="./manual/latest/enterprise-integration-patterns.html">EIP reference</a>
+<a class="significant" href="./components/latest/eips/enterprise-integration-patterns.html">EIP reference</a>
 <a class="significant" href="./components/latest/">Component reference</a>
 {{< /div >}}
 
@@ -84,6 +96,14 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 <a class="significant" href="./camel-spring-boot/latest/">Read the docs</a>
 {{< /div >}}
 
+{{< div "project" >}}
+# Camel Karaf
+
+**Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
+
+<a class="significant" href="./camel-karaf/latest/">Read the docs</a>
+{{< /div >}}
+
 {{< /section >}}
 
 {{< section "frontpage columns apache" >}}
@@ -91,6 +111,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 # Apache &amp; OpenSource
 
 {{< div "split" >}}
+![20 years of Apache Software foundation](/img/apache-20.png)
+{{< /div >}}
+
+{{< div "split" >}}
+
 **Camel is your project!**
 
 Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening to proposals and comments.
@@ -101,10 +126,6 @@ We also love contributions: don't hesitate to [contribute](./manual/latest/contr
 
 [Be Involved In The Community](./manual/latest/contributing.html) | [How To Contribute](./manual/latest/contributing.html)
 
-{{< /div >}}
-
-{{< div "split" >}}
-![20 years of Apache Software foundation](/img/apache-20.png)
 {{< /div >}}
 
 {{< /section >}}

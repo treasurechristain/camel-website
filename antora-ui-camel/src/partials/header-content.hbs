@@ -1,30 +1,22 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="nav-logo" href="{{siteRootPath}}"><span>{{site.title}}</span></a>
+      <a class="nav-logo" href="{{siteRootPath}}"></a>
       <div id="topbar-nav" class="navbar-menu">
         <div class="navbar-end">
           {{#withMenuData}}
             {{#each @items}}
                 {{#if children}}
                 <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">{{name}}</a>
-                {{else}}
-                <a class="navbar-item" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
-                {{/if}}
-                {{#if children}}
+                <a class="navbar-link navbar-topics" href="#">{{name}}</a>
                 <div class="navbar-dropdown">
                 {{#each children}}
-                  {{#hasPrefix url }}
                   <a class="navbar-item" href="{{url}}">{{name}}</a>
-                  {{else}}
-                  <a class="navbar-item" href="{{../../../siteRootPath}}{{url}}">{{name}}</a>
-                  {{/hasPrefix}}
                 {{/each}}
                 </div>
-                {{/if}}
-                {{#if children}}
                 </div>
+                {{else}}
+                <a class="navbar-item navbar-topics" href="{{url}}">{{name}}</a>
                 {{/if}}
             {{/each}}
           {{/withMenuData}}
@@ -33,9 +25,10 @@
       <div class="navbar-fill"></div>
       <div class="navbar-search results-hidden">
         <input id="search" class="search" placeholder="Search" autocomplete="off">
+        <img src= "/_/img/cancel.svg" id="search-cancel">
         <div id="search_results"></div>
       </div>
-      <div class="navbar-tools">
+      <div id="social-media" class="navbar-tools">
         <a href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#github" /></svg></a>
         <a href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#gitter" /></svg></a>
         <a href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#twitter" /></svg></a>

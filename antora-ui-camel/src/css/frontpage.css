@@ -11,7 +11,7 @@ header.frontpage h1 {
   font-size: 5rem;
   font-weight: bolder;
   color: var(--heading-font-color);
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
   text-transform: none;
   text-shadow: -1px -1px 1px #fff5, 1px -1px 1px #fff5, -1px 1px 1px #fff5, 1px 1px 1px #fff5;
@@ -58,16 +58,19 @@ header.frontpage a:active {
   font-weight: bold;
   outline: none;
   display: inline-block;
-  white-space: nowrap;
+  box-shadow: 0 4px #8e480b;
 }
 
 .frontpage a.significant:hover {
   color: var(--color-white);
-  box-shadow: 0 0 1.5rem var(--color-glow);
+  box-shadow: 0 3px #8e480b;
+  transform: translateY(2px);
 }
 
 .frontpage a.significant:active {
   color: var(--color-white);
+  box-shadow: 0 3px #8e480b;
+  transform: translateY(2px);
 }
 
 header.frontpage svg {
@@ -81,17 +84,17 @@ header.frontpage svg {
 
 header.frontpage svg path {
   fill: none;
-  animation: sparkle 5s ease alternate infinite;
+  animation: sparkle 2s ease alternate infinite;
 }
 
 header.frontpage svg path:nth-child(1) {
-  stroke: #ffddab;
+  stroke: #ffebcc;
   stroke-width: 10;
-  stroke-opacity: 0.6;
+  stroke-opacity: 0.9;
 }
 
 header.frontpage svg path:nth-child(2) {
-  stroke: #9d1609;
+  stroke: #911408;
   stroke-width: 10;
   stroke-opacity: 0.3;
   animation-delay: -1s;
@@ -101,18 +104,18 @@ header.frontpage svg path:nth-child(3) {
   stroke: #f1b35b;
   stroke-width: 15;
   stroke-opacity: 0.6;
-  animation-delay: -2.5s;
+  animation-delay: -3.5s;
 }
 
 header.frontpage svg path:nth-child(4) {
-  stroke: #641a00;
+  stroke: #f28a40;
   stroke-width: 5;
-  stroke-opacity: 0.3;
+  stroke-opacity: 0.4;
   animation-delay: -3s;
 }
 
 header.frontpage svg path:nth-child(5) {
-  stroke: #e26810;
+  stroke: #ee6d11;
   stroke-width: 5;
   stroke-opacity: 0.6;
   animation-delay: -6s;
@@ -120,7 +123,7 @@ header.frontpage svg path:nth-child(5) {
 
 @keyframes sparkle {
   0% {
-    stroke-opacity: 0.3;
+    stroke-opacity: 0.2;
   }
 
   100% {
@@ -141,12 +144,14 @@ section.frontpage.columns {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--color-smoke-50);
+  padding-top: 3rem;
 }
 
 section.frontpage.projects {
   display: flex;
   flex-direction: column;
   border-top: 1px solid var(--color-smoke-50);
+  padding-top: 3rem;
 }
 
 section.frontpage.projects .project {
@@ -155,8 +160,8 @@ section.frontpage.projects .project {
 }
 
 section.frontpage.projects .project h1 {
-  white-space: nowrap;
-  padding: 1rem 0;
+  text-align: right;
+  padding: 0 1rem;
   flex: 1;
 }
 
@@ -172,7 +177,7 @@ section.frontpage.projects .project a.significant {
 }
 
 section.frontpage.apache {
-  padding: 1rem;
+  padding-top: 3rem;
 }
 
 section.frontpage h1,
@@ -186,6 +191,7 @@ section.frontpage h6 {
   line-height: 1.3;
   margin: 1rem 0 0;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 section.frontpage a {
@@ -201,13 +207,18 @@ section.frontpage h1 {
   text-align: center;
 }
 
+section.frontpage h2 {
+  text-align: center;
+}
+
 .box {
   flex: 50%;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 }
 
 .box div {
-  padding: 1rem;
+  padding: 1.8rem;
+  text-align: center;
   margin: 1rem;
   border: 1px solid var(--color-smoke-50);
   height: 100%;
@@ -215,6 +226,12 @@ section.frontpage h1 {
 
 .box div img {
   width: 27rem;
+}
+
+.box .feature-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
 }
 
 .split {
@@ -226,21 +243,57 @@ section.frontpage h1 {
   max-width: 100%;
 }
 
+@media screen and (max-width: 626px) {
+  .split {
+    flex: 100%;
+    margin: 0 1rem;
+  }
+
+  section.frontpage.columns,
+  section.frontpage.projects,
+  section.frontpage.apache {
+    padding-top: 1rem;
+  }
+
+  .box {
+    padding: 1rem 0;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   header.frontpage h1 {
-    font-size: 15vw;
+    font-size: 9vw;
   }
 
   header.frontpage svg {
-    display: none;
+    height: 10rem;
+  }
+
+  .split {
+    margin: 0 1rem;
+    flex: 100%;
+  }
+
+  .split img {
+    max-width: 70%;
+    display: block;
+    margin: auto;
   }
 
   .box {
     min-width: 51vw;
   }
 
+  section.frontpage.projects .project h1 {
+    text-align: center;
+  }
+
   section.frontpage.projects .project {
     flex-direction: column;
+  }
+
+  section.frontpage.projects .project p:nth-child(2) {
+    text-align: center;
   }
 
   section.frontpage.projects .project p:nth-child(3) {

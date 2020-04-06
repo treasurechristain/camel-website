@@ -18,6 +18,7 @@
   list-style: none;
   padding: 0;
   margin-top: 1rem;
+  display: inline-block;
 }
 
 article.blog:first-child {
@@ -53,12 +54,16 @@ article.blog p {
 }
 
 .blog .post aside time {
-  color: var(--color-gray-50);
+  color: var(--color-gray-60);
 }
 
 .blog .post aside p {
-  line-height: 3rem;
-  color: var(--color-gray-50);
+  padding-top: 1.5rem;
+  color: var(--color-gray-60);
+}
+
+.blog .post aside p span[rel="author"] {
+  display: inline-block;
 }
 
 .blog .post aside {
@@ -96,7 +101,41 @@ article.blog p {
 
 .blog .post-content pre {
   max-width: 800px;
-  white-space: pre-wrap;
+}
+
+.blog .post .post-content table {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.blog .post .post-content tr:nth-child(even) {
+  background: var(--color-smoke-50);
+}
+
+.blog .post .post-content td {
+  padding: 0.5rem;
+}
+
+.blog .post .post-content th {
+  padding: 0.7rem;
+  background: var(--color-smoke-90);
+}
+
+.blog .post aside figure img {
+  margin-right: 1rem;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.blog .post aside figure {
+  margin: 1rem 0;
+}
+
+.blog .post aside figure figcaption {
+  display: inline;
 }
 
 @media screen and (min-width: 1024px) {
@@ -110,7 +149,7 @@ article.blog p {
 
   .blog .post aside {
     width: 30rem;
-    min-width: 12rem;
+    min-width: 16rem;
   }
 
   .blog a.arrow {
@@ -133,28 +172,21 @@ article.blog p {
   .blog.list {
     flex-direction: row;
   }
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
+/* for mobile screens */
+@media screen and (max-width: 1023px) {
+  .blog.list aside {
+    display: none;
   }
+}
 
-  th,
-  td {
-    padding: 0.875rem;
-  }
+.blog ul,
+.blog ol {
+  padding-bottom: 1rem;
+}
 
-  table,
-  th,
-  td {
-    border: 1px solid gray;
-  }
-
-  th {
-    background: var(--color-camel-orange);
-  }
-
-  tr:nth-child(even) {
-    background: var(--color-gray-10);
-  }
+.blog li ul,
+.blog li ol {
+  padding-bottom: 0;
 }
